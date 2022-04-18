@@ -1,8 +1,3 @@
-
-
-type AvoEnv = string;
-type CustomDestination = any;
-
 let customDestination: CustomDestination = {
     make: function (_env: AvoEnv, apiKey: string) {
        // @ts-ignore
