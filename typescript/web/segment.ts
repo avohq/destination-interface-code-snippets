@@ -1,4 +1,3 @@
-// Example: Destination interface for the Segment SDK. Replace the Segment implementation with your own tracking SDK methods
 let customDestination = {
   make: function (env: AvoEnv, apiKey: string) {
     analytics.load(apiKey)
