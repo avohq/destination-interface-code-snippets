@@ -1,4 +1,4 @@
-let customDestination = {
+let heapDestinationInterface = {
   logEvent: function (eventName, eventProperties) {
     window.heap.track(
       eventName,
