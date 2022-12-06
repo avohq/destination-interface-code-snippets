@@ -23,7 +23,6 @@ let freshpaintDestinationInterface = {
   },
   logPage: function (pageName: string, eventProperties: object) {
     freshpaint.page(
-      "page",
       eventProperties.assign({ "name": pageName }) as Record<string, unknown>
     )
   },
