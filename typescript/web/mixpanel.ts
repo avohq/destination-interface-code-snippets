@@ -1,9 +1,9 @@
 // Install the official Mixpanel browser SDK: npm i --save mixpanel-browser
-import mixpanel from 'mixpanel-browser';
+import mixpanel from "mixpanel-browser";
 // Optionally install the Defenitely Typed package: npm i --save-dev @types/mixpanel-browser
 
 // Import the Codegen file from the location you've chosen
-import Avo, { AvoEnv, CustomDestination } from '../path/to/Avo';
+import { AvoEnv, CustomDestination } from "../path/to/Avo";
 
 const mixpanelDestinationInterface: CustomDestination = {
   make: (env, apiKey) =>
@@ -29,7 +29,7 @@ const mixpanelDestinationInterface: CustomDestination = {
     mixpanel.track_with_groups(
       eventName,
       eventProperties,
-      groupTypeNamesToGroupIds,
+      groupTypeNamesToGroupIds
     ),
 
   setGroupProperties: (groupTypeName, groupId, groupProperties) =>
