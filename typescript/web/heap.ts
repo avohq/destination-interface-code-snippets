@@ -42,8 +42,12 @@ const heapDestinationInterface: CustomDestination = {
   unidentify: () => window.heap.resetIdentity(),
 
   logPage: (pageName, eventProperties) =>
+    // Heap doesn't support page tracking out of the box but we could
+    // implement it manually by tracking a "page" event like this:
     window.heap.track("page", { ...eventProperties, pageName }),
 
   revenue: (amount, eventProperties) =>
+    // Heap doesn't support revenue tracking out of the box but we could
+    // implement it manually by tracking a "revenue" event like this:
     window.heap.track("revenue", { ...eventProperties, revenue: amount }),
 };
