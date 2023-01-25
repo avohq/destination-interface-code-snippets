@@ -12,9 +12,8 @@ const freshpaintDestinationInterface = {
   logEvent: (eventName, eventProperties) =>
     freshpaint.track(eventName, eventProperties),
 
-  setUserProperties: function (userId, userProperties) {
-    freshpaint.identify(userId, userProperties);
-  },
+  setUserProperties: (userId, userProperties) =>
+    freshpaint.identify(userId, userProperties),
 
   unidentify: () => freshpaint.reset(),
 
