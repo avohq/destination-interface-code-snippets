@@ -4,7 +4,6 @@ import Avo from './Avo';
 
 var googleAnalyticsDestinationInterface = {
   logEvent: function (eventName, eventProperties) {
-    gtag('event', eventName, eventProperties);
     this.dataLayer.push({
       ...eventProperties
       event: properties.event || 'interaction',
