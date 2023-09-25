@@ -17,7 +17,7 @@ const freshpaintDestinationInterface = {
 
   unidentify: () => freshpaint.reset(),
 
-  logPage: (pageName, eventProperties) =>
+  page: (pageName, eventProperties) =>
     freshpaint.page({ ...eventProperties, name: pageName }),
 
   // Revenue is not supported by Freshpaint
