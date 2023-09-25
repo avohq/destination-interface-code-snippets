@@ -12,7 +12,7 @@ const rudderstackDestinationInterface = {
   logEvent: (eventName, eventProperties) =>
     rudderanalytics.track(eventName, eventProperties),
 
-  logPage: (eventName, eventProperties) =>
+  page: (eventName, eventProperties) =>
     rudderanalytics.page(undefined, eventName, eventProperties),
 
   setUserProperties: (userId, userProperties) =>

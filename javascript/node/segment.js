@@ -16,7 +16,7 @@ const segmentDestinationInterface = {
   setUserProperties: (userId, userProperties) =>
     analytics.identify({ userId, traits: userProperties }),
 
-  logPage: (userId, pageName, eventProperties) =>
+  page: (userId, pageName, eventProperties) =>
     analytics.page({ userId, name: pageName, properties: eventProperties }),
 
   revenue: (userId, amount, eventProperties) =>

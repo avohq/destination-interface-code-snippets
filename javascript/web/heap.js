@@ -15,7 +15,7 @@ const heapDestinationInterface = {
 
   unidentify: () => window.heap.resetIdentity(),
 
-  logPage: (pageName, eventProperties) =>
+  page: (pageName, eventProperties) =>
     // Heap doesn't support page tracking out of the box but we could
     // implement it manually by tracking a "page" event like this:
     window.heap.track("page", { ...eventProperties, pageName }),
