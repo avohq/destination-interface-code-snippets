@@ -17,7 +17,7 @@ var googleAnalyticsDestinationInterface = {
   revenue: function (amount, eventProperties) {
     gtag('event', 'purchase', { ...eventProperties, amount });
   },
-  page: function (screenName, eventProperties) {
+  logPage: function (screenName, eventProperties) {
     gtag('event', 'screen_view', {
       ...eventProperties,
       screen_name: screenName,
