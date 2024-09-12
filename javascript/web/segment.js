@@ -17,7 +17,7 @@ const segmentDestinationInterface = {
 
   unidentify: () => analytics.reset(),
 
-  page: (eventName, eventProperties) =>
+  logPage: (eventName, eventProperties) =>
     analytics.page(eventName, eventProperties),
 
   revenue: (amount, eventProperties) =>
