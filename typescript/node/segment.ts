@@ -32,10 +32,10 @@ const segmentDestinationInterface: CustomDestination = {
     }),
 
   // The following methods are used for group analytics and you might not need them. Learn more about group analytics here: https://www.avo.app/docs/data-design/groups
-  addCurrentUserToGroup: (userId, _groupType, groupId) =>
+  addCurrentUserToGroup: (/* anonylousUserId, depending on setup, */ userId, _groupType, groupId, _groupProperties) =>
     analytics?.group({ userId, groupId }),
 
-  setGroupProperties: (userId, _groupType, groupId, groupProperties) =>
+  setGroupProperties: (/* anonylousUserId, depending on setup, */ userId, _groupType, groupId, groupProperties) =>
     analytics?.group({ userId, groupId, traits: groupProperties }),
 
   // Not supported by the Segment SDK
